@@ -182,6 +182,33 @@
     </div>
   </header>
 
+
+        <table class="table">
+
+          <thead>
+            <tr>
+              <th scope="col">id</th>
+              <th scope="col">Названия</th>
+              <th scope="col">Цена</th>
+            </tr>
+            </thead>
+          {% if list_product %}
+            <ul>
+            {% for product in list_product %}
+          <tbody>
+            <tr>
+              <th >{{ product.id }}</th>
+              <th >{{ product.name }}</th>
+              <th >{{ product.price }}</th>
+            </tr>
+          </tbody>
+                      {% endfor %}
+        </ul>
+        {% else %}
+          <p>No polls are available.</p>
+        {% endif %}
+        </table>
+
   <main>
     <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
       <div class="col">
@@ -192,6 +219,7 @@
           <div class="card-body">
             <h1 class="card-title pricing-card-title">$0<small class="text-body-secondary fw-light">/mo</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
+              <li>White Rabbit</li>
               <li>White Rabbit</li>
               <li>Mad Hatter</li>
             </ul>

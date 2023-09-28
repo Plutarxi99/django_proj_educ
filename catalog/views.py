@@ -1,10 +1,13 @@
 from django.shortcuts import render
-
-from django.shortcuts import render
+from .models import Product
+from django.db import connection
 
 
 def home(request):
-    return render(request, 'catalog/home.html')
+
+    list_product = Product.objects.all()
+    context = {"list_product": list_product}
+    return render(request, 'catalog/home.html', context)
 
 
 def contact(request):

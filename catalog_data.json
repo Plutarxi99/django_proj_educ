@@ -1,0 +1,78 @@
+[
+  {
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+      "name": "ручка",
+      "description": "для письма",
+      "pictures": "",
+      "category": 1,
+      "price": 50,
+      "data_of_creation": "2018-11-20T21:58:44.767Z",
+      "data_end_change": "2023-09-28T15:37:19.313Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+      "name": "компьютер",
+      "description": "для учебы",
+      "pictures": "",
+      "category": 2,
+      "price": 30000,
+      "data_of_creation": "2018-11-20T21:58:44.767Z",
+      "data_end_change": "2023-09-28T15:37:19.313Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "name": "тетрадь",
+      "description": "для письма",
+      "pictures": "",
+      "category": 1,
+      "price": 100,
+      "data_of_creation": "2018-11-20T21:58:44.767Z",
+      "data_end_change": "2023-09-28T15:37:19.313Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+      "name": "клавиатура",
+      "description": "для учебы",
+      "pictures": "",
+      "category": 2,
+      "price": 2000,
+      "data_of_creation": "2018-11-20T21:58:44.767Z",
+      "data_end_change": "2023-09-28T15:37:19.313Z"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+      "name": "канцелярия",
+      "description": "для принадлежностей письма"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+      "name": "школа",
+      "description": "для обработки не автоматизированного кода"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {
+      "name": "кухня",
+      "description": "для посуды"
+    }
+  }
+]
