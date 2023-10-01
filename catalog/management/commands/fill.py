@@ -17,7 +17,7 @@ class Command(BaseCommand):
 
         # Добавляет данные в таблицу catalog_product
         product_list = [
-            {'name': 'ручка', 'description': 'для письма', 'category': '1', 'price': '50'},
+            {'name': 'ручка', 'description': 'для письма', 'pictures': 'plut.png', 'category': '1', 'price': '50'},
             {'name': 'компьютер', 'description': 'для учебы', 'category': '2', 'price': '30000'},
             {'name': 'тетрадь', 'description': 'для письма', 'category': '1', 'price': '100'},
             {'name': 'клавиатура', 'description': 'для учебы', 'category': '2', 'price': '2000'}

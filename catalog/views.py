@@ -1,12 +1,14 @@
 from django.shortcuts import render
-from .models import Product
+from .models import Product, Category
 from django.db import connection
 
 
 def home(request):
 
     list_product = Product.objects.all()
-    context = {"list_product": list_product}
+    context = {
+        "object_list": list_product
+    }
     return render(request, 'catalog/home.html', context)
 
 
@@ -18,4 +20,9 @@ def contact(request):
         message = request.POST.get('message')
         # а также передается информация, которую заполнил пользователь
         print(name, email, message)
+    # context = {
+    #     "title": 'Contact'
+    # }
     return render(request, 'catalog/contact.html')
+
+
