@@ -212,4 +212,5 @@ ENV/
 /site
 
 # End of https://www.gitignore.io/api/macos,linux,django,python,pycharm
-example_bootstrap
+catalog/templates/catalog/product_table.html
+/bootstrap-5.3.2-examples/

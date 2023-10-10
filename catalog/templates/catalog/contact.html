@@ -1,0 +1,52 @@
+{% extends 'catalog/base_cover.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <div class="container-fluid">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Contact</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">for feedback</h6>
+                        <p class="card-text">email: alice@bk.ru</p>
+                        <p class="card-text">adress: Wonderland, rabbit hole</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your name</label>
+                    <input type="text" name="name" id="name"/><br>
+                </div>
+                <div class="mb-3">
+                    <label for="Email" class="form-label">Email address</label>
+                    <input type="email" name="email" id="Email"/><br>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">message</label>
+                    <textarea class="form-control" name="message" id="message" rows="3"></textarea>
+                </div>
+                <input type="submit" value="submit">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content_image %}
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+
+  <main class="px-3">
+    <h1>Cover your page.</h1>
+    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+    <p class="lead">
+      <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Learn more</a>
+    </p>
+  </main>
+
+{% endblock %}
