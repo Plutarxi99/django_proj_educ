@@ -37,19 +37,14 @@
                             <td>Цена</td>
                             <td>{{ object.data_end_change }}</td>
                         </tr>
-                        <tr>
-                            <td>Картинка</td>
-                            <td>
-                                <img class="card-img-top"
-                                     src="{{ product.pictures|mymedia }}"
-                                     alt="Card image cap">
-                            </td>
-                        </tr>
                     </table>
                 </div>
-                <div class="card-footer">
-                </div>
             </div>
+        </div>
+        <div class="col-6">
+            <img class="card-img-top"
+                 src="{{ product.pictures|mymedia }}"
+                 alt="Card image cap">
         </div>
     </div>
 </div>

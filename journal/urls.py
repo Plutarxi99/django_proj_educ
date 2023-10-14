@@ -1,6 +1,7 @@
 from django.urls import path
 from journal.apps import JournalConfig
-from journal.views import JournalCreateView, JournalListView, JournalDetailView, JournalUpdateView, JournalDeleteView
+from journal.views import JournalCreateView, JournalListView, JournalDetailView, JournalUpdateView, JournalDeleteView, \
+    is_publish, send_email
 
 app_name = JournalConfig.name
 
@@ -11,5 +12,6 @@ urlpatterns = [
     path('view/<int:pk>/', JournalDetailView.as_view(), name='view'),
     path('edit/<int:pk>/', JournalUpdateView.as_view(), name='edit'),
     path('delete/<int:pk>/', JournalDeleteView.as_view(), name='delete'),
-    # path('', home, name='home').
+    path('publish/<int:pk>/', is_publish, name='published_is'),
+    path('count_view/<int:pk>/', send_email, name='count_view'),
 ]

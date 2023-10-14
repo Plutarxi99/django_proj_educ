@@ -34,6 +34,10 @@
             <th>
                 <a href="{% url 'catalog:view' product.pk %}"
                    class="btn btn-sm btn-outline-secondary">Просмотр</a>
+                <a href="{% url 'catalog:edit' product.pk %}"
+                   class="btn btn-sm btn-outline-secondary">Изменение</a>
+                <a href="{% url 'catalog:delete' product.pk %}"
+                   class="btn btn-sm btn-outline-secondary">Удаление</a>
             </th>
         </tr>
         </tbody>

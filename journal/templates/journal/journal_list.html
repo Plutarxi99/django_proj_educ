@@ -7,23 +7,28 @@
 
 {% for object in object_list %}
 <div class="col md-4">
-<div class="card mb-4 box-shadow">
-    <div class="card-body">
-        <p class="card-text">
-            {{ object|title }}
-        </p>
-        <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-                <a href="{% url 'journal:view' object.pk %}" type="button"
-                   class="btn btn-sm btn-outline-secondary">View</a>
-                <a href="{% url 'journal:edit' object.pk %}" type="button"
-                   class="btn btn-sm btn-outline-secondary">Edit</a>
-                <a href="{% url 'journal:delete' object.pk %}" type="button"
-                   class="btn btn-sm btn-outline-secondary">Delete</a>
+    <div class="card mb-4 box-shadow">
+        <div class="card-body">
+            <p class="card-text">
+                {{ object|title }}
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a href="{% url 'journal:view' object.pk %}" type="button"
+                       class="btn btn-sm btn-outline-secondary">View</a>
+                    <a href="{% url 'journal:edit' object.pk %}" type="button"
+                       class="btn btn-sm btn-outline-secondary">Edit</a>
+                    <a href="{% url 'journal:delete' object.pk %}" type="button"
+                       class="btn btn-sm btn-outline-secondary">Delete</a>
+                </div>
+                    {% if object.published_is %}
+                        <a class="btn btn-success" href="{% url 'journal:published_is' object.pk %}" type="button">Publish</a>
+                    {% else %}
+                        <a class="btn btn-warning" href="{% url 'journal:published_is' object.pk %}" type="button">not Publish</a>
+                    {% endif %}
             </div>
         </div>
     </div>
-</div>
 </div>
 {% endfor %}
 <div class="card" style="width: 18rem;">
