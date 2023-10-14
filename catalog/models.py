@@ -4,7 +4,8 @@ NULLABLE = {'blank': True, 'null': True}
 
 
 class Product(models.Model):
-    name = models.CharField(max_length=250, verbose_name='Наименование', db_comment='поле для названия продукта', unique=True)
+    name = models.CharField(max_length=250, verbose_name='Наименование', db_comment='поле для названия продукта',
+                            unique=True)
     description = models.TextField(verbose_name='Описание')
     pictures = models.ImageField(upload_to='pictures_prod/', verbose_name='Изображение(превью)', **NULLABLE)
     category = models.IntegerField(verbose_name='категория')
@@ -31,3 +32,5 @@ class Category(models.Model):
     class Meta:
         verbose_name = 'категория'
         verbose_name_plural = 'категории'
+
+
