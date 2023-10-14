@@ -1,0 +1,51 @@
+{% extends 'catalog/base_pricing.html' %}
+{% load my_tags %}
+
+
+{% block content_catalog_one %}
+<div class="col-12">
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card_header">
+                    <h3 class="card-title">
+                        Материал {{ object.title }}
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <p>
+                        {{ object.body }}
+                    </p>
+                    <table class="table">
+                        <tr>
+                            <td>Название</td>
+                            <td>{{ object.name }}</td>
+                        </tr>
+                        <tr>
+                            <td>Описание</td>
+                            <td>{{ object.description }}</td>
+                        </tr>
+                        <tr>
+                            <td>Дата создания</td>
+                            <td>{{ object.price }}</td>
+                        </tr>
+                        <tr>
+                            <td>Дата изменения</td>
+                            <td>{{ object.data_of_creation }}</td>
+                        </tr>
+                        <tr>
+                            <td>Цена</td>
+                            <td>{{ object.data_end_change }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <img class="card-img-top"
+                 src="{{ product.pictures|mymedia }}"
+                 alt="Card image cap">
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,15 +1,34 @@
 from django.shortcuts import render
+from django.urls import reverse_lazy
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+
 from .models import Product, Category
 from django.db import connection
 
 
-def home(request):
+class ProductListView(ListView):
+    model = Product
 
-    list_product = Product.objects.all()
-    context = {
-        "object_list": list_product
-    }
-    return render(request, 'catalog/home.html', context)
+
+class ProductDetailView(DetailView):
+    model = Product
+
+
+class ProductCreateView(CreateView):
+    model = Product
+    fields = ('name', 'description', 'category', 'price', 'pictures',)
+    success_url = reverse_lazy('catalog:home')
+
+
+class ProductUpdateView(UpdateView):
+    model = Product
+    fields = ('name', 'description', 'category', 'price', 'pictures',)
+    success_url = reverse_lazy('catalog:home')
+
+
+class ProductDeleteView(DeleteView):
+    model = Product
+    success_url = reverse_lazy('catalog:home')
 
 
 def contact(request):
@@ -20,9 +39,4 @@ def contact(request):
         message = request.POST.get('message')
         # а также передается информация, которую заполнил пользователь
         print(name, email, message)
-    # context = {
-    #     "title": 'Contact'
-    # }
     return render(request, 'catalog/contact.html')
-
-
