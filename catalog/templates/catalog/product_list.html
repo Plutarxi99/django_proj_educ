@@ -3,11 +3,14 @@
 {% block content_title %}
 <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
     <h1 class="display-4 fw-normal text-body-emphasis">Wonderland</h1>
-    <p class="fs-5 text-body-secondary">QChoose your team</p>
+    <p class="fs-5 text-body-secondary">Choose your team</p>
 </div>
 {% endblock %}
 
 {% block content_table %}
+<a
+    class="btn btn-outline-primary" href="{% url 'catalog:create' %}">Добавить продукт
+</a>
 <table class="table">
 
     <thead>
@@ -16,7 +19,7 @@
         <th scope="col">Названия</th>
         <th scope="col">Цена</th>
         <th scope="col">Описание</th>
-        <th scope="col">Картинка</th>
+        <th scope="col">Открыть</th>
     </tr>
     </thead>
     {% if object_list %}
@@ -29,9 +32,12 @@
             <th>{{ product.price }}</th>
             <th>{{ product.description | truncatechars:100}}</th>
             <th>
-                <img class="card-img-top"
-                src="{{ product.pictures|mymedia }}"
-                alt="Card image cap">
+                <a href="{% url 'catalog:view' product.pk %}"
+                   class="btn btn-sm btn-outline-secondary">Просмотр</a>
+                <a href="{% url 'catalog:edit' product.pk %}"
+                   class="btn btn-sm btn-outline-secondary">Изменение</a>
+                <a href="{% url 'catalog:delete' product.pk %}"
+                   class="btn btn-sm btn-outline-secondary">Удаление</a>
             </th>
         </tr>
         </tbody>
@@ -54,7 +60,6 @@
                 <h1 class="card-title pricing-card-title">$0<small
                         class="text-body-secondary fw-light">/mo</small></h1>
                 <ul class="list-unstyled mt-3 mb-4">
-                    <li>White Rabbit</li>
                     <li>White Rabbit</li>
                     <li>Mad Hatter</li>
                 </ul>

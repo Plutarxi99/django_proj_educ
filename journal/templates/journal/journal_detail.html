@@ -1,0 +1,40 @@
+{% extends 'catalog/base_pricing.html' %}
+{% load my_tags %}
+{% block content %}
+<div class="col-12">
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card_header">
+                    <h3 class="card-title">
+                        Журнал {{ object.title }} ({{ object.slug }})
+                    </h3>
+                    <img src="..." class="card-img-top" alt="Card image cap">
+                </div>
+                <div class="card-body">
+                    <p>
+                        {{ object.content }}
+                    </p>
+                    <table class="table">
+                        <tr>
+                            <td>Дать создания</td>
+                            <td>{{ object.data_create }}</td>
+                        </tr>
+                        <tr>
+                            {% if object.count_view > 15 %}
+<!--                                {{ send_mail }}-->
+                                <a class="btn btn-success" href="{% url 'journal:count_view' object.pk %}" type="button">Отправить</a>
+                            {% endif %}
+                            <td>Количество просмотров</td>
+                            <td>{{ object.count_view }}</td>
+
+                        </tr>
+                    </table>
+                </div>
+                <div class="card-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
