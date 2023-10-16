@@ -1,9 +1,7 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-
-from .models import Product, Category
-from django.db import connection
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
+from .models import Product
 
 
 class ProductListView(ListView):
@@ -31,12 +29,16 @@ class ProductDeleteView(DeleteView):
     success_url = reverse_lazy('catalog:home')
 
 
-def contact(request):
-    if request.method == 'POST':
+class ProductTemplateView(TemplateView):
+    model = Product
+    template_name = 'catalog/contact.html'
+
+    def post(self, request, *args, **kwargs):
         # в переменной request хранится информация о методе, который отправлял пользователь
         name = request.POST.get('name')
         email = request.POST.get('email')
         message = request.POST.get('message')
         # а также передается информация, которую заполнил пользователь
         print(name, email, message)
-    return render(request, 'catalog/contact.html')
+
+        return render(request, 'catalog/contact.html')

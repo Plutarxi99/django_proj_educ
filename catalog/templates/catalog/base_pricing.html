@@ -1,4 +1,5 @@
 {% load static %}
+
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
 <head>
@@ -174,7 +175,6 @@
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
     </symbol>
 </svg>
-
 <div class="container py-3">
     <header>
         <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
@@ -196,9 +196,11 @@
 
             </nav>
         </div>
-        {% block content_title %}
-        {% endblock %}
     </header>
+</div>
+<div class="container">
+            {% block content_title %}
+        {% endblock %}
     {% block content %}
     {% endblock %}
 
@@ -217,7 +219,7 @@
 
     {% block content_catalog_one %}
     {% endblock %}
-
+</div>
 
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 
