@@ -14,7 +14,7 @@ class Product(models.Model):
     data_end_change = models.DateTimeField(auto_now_add=True, verbose_name='дата последнего изменения')
 
     def __str__(self):
-        return f'{self.name}/{self.data_of_creation} - {self.data_end_change}: {self.description}'
+        return f'{self.name}/{self.description}'
 
     class Meta:
         verbose_name = 'продукт'
@@ -34,3 +34,15 @@ class Category(models.Model):
         verbose_name_plural = 'категории'
 
 
+class Version(models.Model):
+    product_name = models.ForeignKey('Product', on_delete=models.CASCADE, verbose_name='продукт')
+    version_number = models.PositiveIntegerField(verbose_name='номер версии')
+    version_name = models.CharField(max_length=250, verbose_name='название версии')
+    version_is = models.BooleanField(verbose_name='Активность')
+
+    def __str__(self):
+        return f'{self.product_name}/{self.version_name} - {self.version_number}: {self.version_is}'
+
+    class Meta:
+        verbose_name = 'версия'
+        verbose_name_plural = 'версии'

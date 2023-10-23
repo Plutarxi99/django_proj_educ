@@ -9,18 +9,11 @@
             <div class="card">
                 <div class="card_header">
                     <h3 class="card-title">
-                        Материал {{ object.title }}
+                        {{ object.name | title }}
                     </h3>
                 </div>
                 <div class="card-body">
-                    <p>
-                        {{ object.body }}
-                    </p>
                     <table class="table">
-                        <tr>
-                            <td>Название</td>
-                            <td>{{ object.name }}</td>
-                        </tr>
                         <tr>
                             <td>Описание</td>
                             <td>{{ object.description }}</td>
@@ -42,9 +35,16 @@
             </div>
         </div>
         <div class="col-6">
-            <img class="card-img-top"
-                 src="{{ product.pictures|mymedia }}"
-                 alt="Card image cap">
+            <div class="card">
+                <table class="table">
+                    <tr>
+                        <td><img class="card-img-top"
+                                 src="{{ product.pictures|mymedia }}"
+                                 alt="Card image cap">
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 </div>

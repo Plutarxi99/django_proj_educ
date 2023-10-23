@@ -1,0 +1,150 @@
+[
+  {
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+      "name": "ручка",
+      "description": "для письма",
+      "pictures": "plut.png",
+      "category": 1,
+      "price": 50,
+      "data_of_creation": "2018-11-20T21:58:44.767Z",
+      "data_end_change": "2023-10-01T22:34:09.624Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+      "name": "компьютер",
+      "description": "для учебы",
+      "pictures": "",
+      "category": 2,
+      "price": 30000,
+      "data_of_creation": "2018-11-20T21:58:44.767Z",
+      "data_end_change": "2023-10-01T22:34:09.624Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "name": "тетрадь",
+      "description": "для письма",
+      "pictures": "",
+      "category": 1,
+      "price": 100,
+      "data_of_creation": "2018-11-20T21:58:44.767Z",
+      "data_end_change": "2023-10-01T22:34:09.624Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+      "name": "клавиатура",
+      "description": "для учебы",
+      "pictures": "",
+      "category": 2,
+      "price": 2000,
+      "data_of_creation": "2018-11-20T21:58:44.767Z",
+      "data_end_change": "2023-10-01T22:34:09.624Z"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+      "name": "канцелярия",
+      "description": "для принадлежностей письма"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+      "name": "школа",
+      "description": "для обработки не автоматизированного кода"
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 1,
+    "fields": {
+      "product_name": 1,
+      "version_number": 1,
+      "version_name": "Шариковая",
+      "version_is": true
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 2,
+    "fields": {
+      "product_name": 2,
+      "version_number": 1,
+      "version_name": "Игровой",
+      "version_is": true
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 3,
+    "fields": {
+      "product_name": 3,
+      "version_number": 1,
+      "version_name": "Бумажная",
+      "version_is": true
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 4,
+    "fields": {
+      "product_name": 4,
+      "version_number": 1,
+      "version_name": "Механическая",
+      "version_is": true
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 7,
+    "fields": {
+      "product_name": 1,
+      "version_number": 2,
+      "version_name": "Гелевая",
+      "version_is": false
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 8,
+    "fields": {
+      "product_name": 4,
+      "version_number": 2,
+      "version_name": "Мембранная",
+      "version_is": false
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 9,
+    "fields": {
+      "product_name": 3,
+      "version_number": 2,
+      "version_name": "Картонная",
+      "version_is": false
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 10,
+    "fields": {
+      "product_name": 2,
+      "version_number": 2,
+      "version_name": "Офисный",
+      "version_is": false
+    }
+  }
+]
