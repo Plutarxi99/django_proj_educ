@@ -1,0 +1,39 @@
+{% extends 'catalog/base_pricing.html' %}
+{% load my_tags %}
+
+
+{% block content_catalog_one %}
+<div class="col-12">
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card_header">
+                    <h3 class="card-title">
+                        Версия {{ object.version_number }}
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <tr>
+                            <td>Продукт</td>
+                            <td>{{ object.product_name }}</td>
+                        </tr>
+                        <tr>
+                            <td>Название версии</td>
+                            <td>{{ object.version_name }}</td>
+                        </tr>
+                        <tr>
+                            <td>Активность</td>
+                            {% if not object.version_is %}
+                                <td class="text-danger">{{ object.version_is }}</td>
+                            {% else %}
+                                <td class="text-success">{{ object.version_is }}</td>
+                            {% endif %}
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

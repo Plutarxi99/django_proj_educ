@@ -1,25 +1,47 @@
 {% extends 'catalog/base_pricing.html' %}
 
 {% block content_journal %}
-<div class="col-12">
-    <div class="row">
-        <div class="col-6">
-            <div class="card" type="center">
-                <div class="card-body">
-                    <form method="post" enctype="multipart/form-data">
+<form method="post" enctype="multipart/form-data">
+
+    <div class="col-12">
+        <div class="row">
+            <div class="col-6">
+                <div class="card" type="center">
+                    <div class="card-header">
+                        <h3>
+                            Продукт
+                        </h3>
+                    </div>
+                    <div class="card-body">
                         {% csrf_token %}
                         {{ form.as_p }}
                         <button type="submit" class="btn btn-danger">
                             {% if object %}
-                                Сохранить
+                            Сохранить
                             {% else %}
-                                Создать
+                            Создать
                             {% endif %}
                         </button>
-                    </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card" type="center">
+                    <div class="card-header">
+                        <h3>
+                            Версия продукта
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        {{ formset.management_form }}
+                        {% for form in formset.forms %}
+                            {{ form.as_p }}
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</form>
+
 {% endblock %}

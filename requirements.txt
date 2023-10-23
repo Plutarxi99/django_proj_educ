@@ -1,4 +1,6 @@
-Django
+Django~=4.2.5
 ipython
 Pillow
 psycopg2-binary
+django-crispy-forms~=2.1
+pytils~=0.4.1

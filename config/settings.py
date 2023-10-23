@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'crispy_forms',
+    'crispy_bootstrap4',
+    'bootstrap4',
     'catalog',
     'journal',
 ]
@@ -66,8 +69,11 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+            ],
             'libraries': {
-                'my_tags': 'catalog.templatetags.my_tags'
+                'my_tags': 'catalog.templatetags.my_tags',
             }
         },
     },
@@ -140,10 +146,12 @@ EMAIL_USE_SSL = True
 
 EMAIL_HOST_USER = 'shievanov.egor@yandex.ru'
 
-
 # value = os.getenv('YANDEX_MAIL_PASSWORD ')
 EMAIL_HOST_PASSWORD = password()
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 SERVER_EMAIL = EMAIL_HOST_USER
 EMAIL_ADMIN = EMAIL_HOST_USER
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
