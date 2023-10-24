@@ -1,4 +1,5 @@
 from django.core.exceptions import ValidationError
+from django.db import models
 
 from catalog.models import Product, Version
 from django import forms
@@ -52,7 +53,7 @@ class VersionForm(forms.ModelForm):
                 'product_name',
                 'version_number',
                 'version_name',
-                'version_is',
+                'version_is_active',
                 css_id='text-center',
                 css_class='p-3 bg-secondary bg-gradient text-white'
             ),
@@ -65,7 +66,7 @@ class VersionForm(forms.ModelForm):
     class Meta:
         model = Version
         fields = '__all__'
-        # fields = ('product_name', 'version_number', 'version_name', 'version_is',)
+        # fields = ('product_name', 'version_number', 'version_name', 'version_is_active',)
         # exclude = ('',)
 
 

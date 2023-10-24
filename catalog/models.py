@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Q
 
 NULLABLE = {'blank': True, 'null': True}
 
@@ -38,11 +39,18 @@ class Version(models.Model):
     product_name = models.ForeignKey('Product', on_delete=models.CASCADE, verbose_name='продукт')
     version_number = models.PositiveIntegerField(verbose_name='номер версии')
     version_name = models.CharField(max_length=250, verbose_name='название версии')
-    version_is = models.BooleanField(verbose_name='Активность')
+    version_is_active = models.BooleanField(verbose_name='Активность')
 
     def __str__(self):
-        return f'{self.product_name}/{self.version_name} - {self.version_number}: {self.version_is}'
+        return f'{self.product_name}/{self.version_name} - {self.version_number}: {self.version_is_active}'
 
     class Meta:
         verbose_name = 'версия'
         verbose_name_plural = 'версии'
+        constraints = [
+            models.UniqueConstraint(
+                fields=['product_name'],
+                condition=Q(version_is_active=True),
+                name='only_one_active_version_for_product',
+            ),
+        ]
