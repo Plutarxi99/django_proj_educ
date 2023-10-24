@@ -1,5 +1,6 @@
 from django.core.exceptions import ValidationError
 from django.db import models
+from django.db.models import Q
 
 from catalog.models import Product, Version
 from django import forms
@@ -8,13 +9,23 @@ from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Submit, Button, Fieldset
 from crispy_forms.bootstrap import FormActions, ContainerHolder
 
+from config.settings import EXCLUDE_WORD
+
 
 class ProductForm(forms.ModelForm):
-    def clean(self):
-        exclude_word = ['казино', 'криптовалюта', 'крипта', 'биржа', 'дешево', 'бесплатно', 'обман', 'полиция', 'радар']
-        data = self.cleaned_data
-        for word in exclude_word:
-            if word in data['name']:
+    def clean_name(self):
+        data = self.cleaned_data['name']
+        for word in EXCLUDE_WORD:
+            # if word in data['name']:
+            if word in data:
+                raise ValidationError('Запрещенные слова не допускаются')
+        return data
+
+    def clean_description(self):
+        data = self.cleaned_data['description']
+        for word in EXCLUDE_WORD:
+            # if word in data['description']:
+            if word in data:
                 raise ValidationError('Запрещенные слова не допускаются')
         return data
 
@@ -22,7 +33,7 @@ class ProductForm(forms.ModelForm):
         model = Product
         # fields = '__all__'
         fields = ('name', 'description', 'category', 'price',)
-        # exclude = ('',)
+
 
 
 class VersionForm(forms.ModelForm):

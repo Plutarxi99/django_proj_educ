@@ -20,6 +20,13 @@ class Product(models.Model):
     class Meta:
         verbose_name = 'продукт'
         verbose_name_plural = 'продукты'
+        constraints = [
+            models.CheckConstraint(
+                check=Q(price__gte=100) | Q(price__isnull=True),
+                name="price_gte_100",
+                violation_error_message='Цена должна быть выше 100 рублей'
+            ),
+        ]
 
 
 class Category(models.Model):
@@ -52,5 +59,6 @@ class Version(models.Model):
                 fields=['product_name'],
                 condition=Q(version_is_active=True),
                 name='only_one_active_version_for_product',
+                violation_error_message='Выберите одну активную версию'
             ),
         ]
