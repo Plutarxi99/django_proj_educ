@@ -64,9 +64,9 @@ class VersionUpdateView(UpdateView):
     success_url = reverse_lazy('catalog:home')
 
 
-def index(request):
-    context = {'form': VersionForm()}
-    return render(request, 'version_form.html', context)
+# def index(request):
+#     context = {'form': VersionForm()}
+#     return render(request, 'version_form.html', context)
 
 
 class ProductDeleteView(DeleteView):

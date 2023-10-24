@@ -50,7 +50,7 @@
             </th>
             <th>
                 {% for version in product.version_set.all %}
-                {% if version.version_is %}
+                {% if version.version_is_active %}
                 <p class="text-success">{{ version.version_name }}</p>
                 {% else %}
                 <p class="text-danger">{{ version.version_name }}</p>
