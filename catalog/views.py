@@ -1,3 +1,4 @@
+from django.db import IntegrityError
 from django.forms import inlineformset_factory
 from django.shortcuts import render
 from django.urls import reverse_lazy
@@ -5,6 +6,8 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 
 from .forms import ProductForm, VersionForm, VersionFormProduct
 from .models import Product, Version
+from django.contrib import messages
+from django.http import JsonResponse, HttpResponse
 
 
 class ProductListView(ListView):
@@ -37,6 +40,18 @@ class ProductUpdateView(UpdateView):
     form_class = ProductForm
     # fields = ('name', 'description', 'category', 'price', 'pictures',)
     success_url = reverse_lazy('catalog:home')
+    error_message = "Оставьте одну активную версию"
+
+    # def form_invalid(self, form):
+    #     messages.error(self.request, self.error_message)
+    #     return super().form_invalid(form)
+
+    # def form_invalid(self, form):
+    #     response = super().form_invalid(form)
+    #     if self.request.accepts('catalog:home'):
+    #         return response
+    #     else:
+    #         return JsonResponse(form.errors, status=400)
 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)

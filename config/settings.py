@@ -156,4 +156,6 @@ EMAIL_ADMIN = EMAIL_HOST_USER
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 
+# Список запрещенных слов для forms.py:ProductForm
+EXCLUDE_WORD = ['казино', 'криптовалюта', 'крипта', 'биржа', 'дешево', 'бесплатно', 'обман', 'полиция', 'радар']
 
