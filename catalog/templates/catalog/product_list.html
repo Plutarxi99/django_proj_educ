@@ -8,6 +8,7 @@
 {% endblock %}
 
 {% block content_table %}
+{% if request.user.is_authenticated %}
 <a
         class="btn btn-outline-primary" href="{% url 'catalog:create' %}">Добавить продукт
 </a>
@@ -23,6 +24,7 @@
         <th scope="col">Работа с продуктом</th>
         <th scope="col">Работа с версиями</th>
         <th scope="col">Активная версия</th>
+        <th scope="col">Создатель продукта</th>
     </tr>
     </thead>
     {% if product_list %}
@@ -58,6 +60,11 @@
                 {% endif %}
                 {% endfor %}
             </th>
+                        <th>
+                            {% if product.product_creator %}
+                            {{ product.product_creator }}
+                            {% endif %}
+                        </th>
 
         </tr>
         </tbody>
@@ -67,6 +74,7 @@
     <p>No polls are available.</p>
     {% endif %}
 </table>
+{% endif %}
 {% endblock %}
 
 {% block content_buy %}
