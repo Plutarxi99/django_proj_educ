@@ -28,6 +28,13 @@ class ProductCreateView(CreateView):
     # fields = ('name', 'description', 'category', 'price', 'pictures',)
     success_url = reverse_lazy('catalog:home')
 
+    def form_valid(self, form):
+        self.object = form.save()
+        self.object.product_creator = self.request.user
+        self.object.save()
+
+        return super().form_valid(form)
+
 
 # class VersionCreateView(CreateView):
 #     model = Version

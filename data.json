@@ -1,5 +1,521 @@
 [
   {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2023-10-19T13:18:35.922Z",
+      "user": 2,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "ручка/2018-11-20 21:58:44.767594+00:00 - 2023-10-01 22:34:09.624392+00:00: для письма/Шариковая - 1: True",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2023-10-21T08:24:16.781Z",
+      "user": 2,
+      "content_type": 10,
+      "object_id": "3",
+      "object_repr": "тетрадь/2018-11-20 21:58:44.767000+00:00 - 2023-10-01 22:34:09.624000+00:00: для письма/Бумажная - 1: False",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2023-10-21T12:54:26.949Z",
+      "user": 2,
+      "content_type": 10,
+      "object_id": "5",
+      "object_repr": "клавиатура/2018-11-20 21:58:44.767000+00:00 - 2023-10-01 22:34:09.624000+00:00: для учебы/Мембранная - 1: True",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2023-10-21T12:55:49.212Z",
+      "user": 2,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "ручка/2018-11-20 21:58:44.767000+00:00 - 2023-10-01 22:34:09.624000+00:00: для письма/Шариковая - 1: False",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f\"]}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add категория",
+      "content_type": 7,
+      "codename": "add_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change категория",
+      "content_type": 7,
+      "codename": "change_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete категория",
+      "content_type": 7,
+      "codename": "delete_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view категория",
+      "content_type": 7,
+      "codename": "view_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add продукт",
+      "content_type": 8,
+      "codename": "add_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change продукт",
+      "content_type": 8,
+      "codename": "change_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete продукт",
+      "content_type": 8,
+      "codename": "delete_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view продукт",
+      "content_type": 8,
+      "codename": "view_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add журнал",
+      "content_type": 9,
+      "codename": "add_journal"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change журнал",
+      "content_type": 9,
+      "codename": "change_journal"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete журнал",
+      "content_type": 9,
+      "codename": "delete_journal"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view журнал",
+      "content_type": 9,
+      "codename": "view_journal"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add версия",
+      "content_type": 10,
+      "codename": "add_version"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change версия",
+      "content_type": 10,
+      "codename": "change_version"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete версия",
+      "content_type": 10,
+      "codename": "delete_version"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view версия",
+      "content_type": 10,
+      "codename": "view_version"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "catalog",
+      "model": "category"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "catalog",
+      "model": "product"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "journal",
+      "model": "journal"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "catalog",
+      "model": "version"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "636wqjuoyedf8cw7483b3m5suqbt5emj",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pChhc7UpfuegcAAUjWQlHZlvLtt0oVu33v_v4V125rt1uJi5yCuQonLL_OOn7EcIjxcuVfJtazL7OWRyNM2OdUQX7ez_TvIruV9Dcr1hlCBJ88INDIxEyIEpY3pkmdF2AEP_RjRGNdDSgNg2okmUlp8vrytNrc:1qn4Qj:62tdMEWp-4QxshsjpxUPzwzkHSoOZQ3Zx6zeC9RoXls",
+      "expire_date": "2023-10-15T21:56:49.754Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "8ikxm3fcfbbonekjl40cnax3oclpetdm",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pChhc7UpfuegcAAUjWQlHZlvLtt0oVu33v_v4V125rt1uJi5yCuQonLL_OOn7EcIjxcuVfJtazL7OWRyNM2OdUQX7ez_TvIruV9Dcr1hlCBJ88INDIxEyIEpY3pkmdF2AEP_RjRGNdDSgNg2okmUlp8vrytNrc:1qlpKr:FG8m9VMoLxn7JzLAntvUEfXFBKMyQcldIdisxCK4sfg",
+      "expire_date": "2023-10-12T11:37:37.976Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "mrqkcblq2s4qrognbl7nly2pdx1jjzri",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQRO_iGln-O6GkzxmsXXuNA8iW4qRC3J1ESgHlzHszbxZgW0vYOi1hTuzKFLv8dgjxSfUA6QH13nhsdV1m5IfCT9r51BK9bqf7d1Cgl30NxhJidKQoSp-1H8mgUkaiEAM5vSeBmEfrMjrnRcxpsCiNSaATZME-XwB2OLI:1qtSiw:6dQtU217ghtfQ8npmTytmSt3OZJeLBAgfKUdX1rxnGs",
+      "expire_date": "2023-11-02T13:06:02.661Z"
+    }
+  },
+  {
     "model": "catalog.product",
     "pk": 1,
     "fields": {
@@ -7,7 +523,7 @@
       "description": "для письма",
       "pictures": "plut.png",
       "category": 1,
-      "price": 50,
+      "price": 150,
       "data_of_creation": "2018-11-20T21:58:44.767Z",
       "data_end_change": "2023-10-01T22:34:09.624Z"
     }
@@ -146,5 +662,277 @@
       "version_name": "Офисный",
       "version_is_active": false
     }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 1,
+    "fields": {
+      "title": "ntcn",
+      "slug": "ntcn",
+      "content": "ntcn",
+      "picture": "",
+      "data_create": "2023-10-12T08:22:12.714Z",
+      "published_is": false,
+      "count_view": 11
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 3,
+    "fields": {
+      "title": "ntcn",
+      "slug": "ntcn",
+      "content": "ntcn",
+      "picture": "",
+      "data_create": "2023-10-12T08:22:40.476Z",
+      "published_is": false,
+      "count_view": 31
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 4,
+    "fields": {
+      "title": "ntcn",
+      "slug": "ntcn",
+      "content": "ntcn",
+      "picture": "",
+      "data_create": "2023-10-12T08:22:42.050Z",
+      "published_is": true,
+      "count_view": 14
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 5,
+    "fields": {
+      "title": "ntcn",
+      "slug": "ntcn",
+      "content": "ntcn",
+      "picture": "",
+      "data_create": "2023-10-12T08:24:12.268Z",
+      "published_is": false,
+      "count_view": 12
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 6,
+    "fields": {
+      "title": "ntcn",
+      "slug": "ntcn",
+      "content": "ntcn",
+      "picture": "",
+      "data_create": "2023-10-12T08:24:56.305Z",
+      "published_is": true,
+      "count_view": 102
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 8,
+    "fields": {
+      "title": "ntcn",
+      "slug": "ntcn",
+      "content": "ntcn",
+      "picture": "",
+      "data_create": "2023-10-12T08:25:00.333Z",
+      "published_is": true,
+      "count_view": 11
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 10,
+    "fields": {
+      "title": "ntcn",
+      "slug": "ntcn",
+      "content": "ng",
+      "picture": "",
+      "data_create": "2023-10-12T09:00:22.589Z",
+      "published_is": false,
+      "count_view": 14
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 11,
+    "fields": {
+      "title": "ntcn",
+      "slug": "wd",
+      "content": "dw",
+      "picture": "",
+      "data_create": "2023-10-12T09:07:29.494Z",
+      "published_is": false,
+      "count_view": 0
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 12,
+    "fields": {
+      "title": "qweqwe",
+      "slug": "qweqweqwe",
+      "content": "qweqweqwe",
+      "picture": "",
+      "data_create": "2023-10-12T14:56:27.121Z",
+      "published_is": false,
+      "count_view": 1
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 13,
+    "fields": {
+      "title": "Егор",
+      "slug": "",
+      "content": "Егор",
+      "picture": "",
+      "data_create": "2023-10-12T15:13:51.735Z",
+      "published_is": false,
+      "count_view": 10
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 14,
+    "fields": {
+      "title": "Малява",
+      "slug": "123",
+      "content": "Такая делоылимфуокщпигофукртжпижуркигуфкриуфкифукифукиуфкиуфкиуфкиуфки",
+      "picture": "",
+      "data_create": "2023-10-12T19:42:26.036Z",
+      "published_is": false,
+      "count_view": 0
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 15,
+    "fields": {
+      "title": "qwe",
+      "slug": null,
+      "content": "qwe",
+      "picture": "",
+      "data_create": "2023-10-12T21:30:11.652Z",
+      "published_is": false,
+      "count_view": 0
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 17,
+    "fields": {
+      "title": "Егор!!!",
+      "slug": "",
+      "content": "Tujh",
+      "picture": "",
+      "data_create": "2023-10-12T21:42:42.053Z",
+      "published_is": true,
+      "count_view": 21
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 18,
+    "fields": {
+      "title": "ntcn",
+      "slug": "ntcn",
+      "content": "qwe",
+      "picture": "",
+      "data_create": "2023-10-12T21:43:16.492Z",
+      "published_is": false,
+      "count_view": 0
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 20,
+    "fields": {
+      "title": "qwqd",
+      "slug": "qwqd",
+      "content": "qwdqwd",
+      "picture": "",
+      "data_create": "2023-10-12T21:44:34.672Z",
+      "published_is": false,
+      "count_view": 0
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 21,
+    "fields": {
+      "title": "Егор",
+      "slug": "",
+      "content": "qwe",
+      "picture": "",
+      "data_create": "2023-10-12T21:46:41.804Z",
+      "published_is": false,
+      "count_view": 10
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 22,
+    "fields": {
+      "title": "qwe",
+      "slug": "qwe",
+      "content": "qwe",
+      "picture": "",
+      "data_create": "2023-10-12T21:47:56.644Z",
+      "published_is": false,
+      "count_view": 0
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 23,
+    "fields": {
+      "title": "Егор",
+      "slug": "",
+      "content": "qwe",
+      "picture": "",
+      "data_create": "2023-10-15T13:46:06.565Z",
+      "published_is": false,
+      "count_view": 12
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 24,
+    "fields": {
+      "title": "Егор123",
+      "slug": "123",
+      "content": "qwrqwrqwrqwr",
+      "picture": "",
+      "data_create": "2023-10-15T15:57:13.937Z",
+      "published_is": false,
+      "count_view": 101
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 25,
+    "fields": {
+      "title": "Егор!!!J",
+      "slug": "j",
+      "content": "qwrwqr",
+      "picture": "",
+      "data_create": "2023-10-15T15:57:49.710Z",
+      "published_is": false,
+      "count_view": 1
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 26,
+    "fields": {
+      "title": "Егор!!!!",
+      "slug": "",
+      "content": "qwrqwr",
+      "picture": "",
+      "data_create": "2023-10-15T15:58:10.208Z",
+      "published_is": false,
+      "count_view": 0
+    }
   }
-]

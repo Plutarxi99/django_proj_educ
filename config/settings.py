@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     'catalog',
     'journal',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -158,4 +159,13 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 
 # Список запрещенных слов для forms.py:ProductForm
 EXCLUDE_WORD = ['казино', 'криптовалюта', 'крипта', 'биржа', 'дешево', 'бесплатно', 'обман', 'полиция', 'радар']
+
+# Для авторизации обязательный параметр
+AUTH_USER_MODEL = 'users.User'
+# Редирект на домашнюю страницу
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/'
+
+# Значения для форм. Для вставки в их условия полей
+NULLABLE = {'blank': True, 'null': True}
 

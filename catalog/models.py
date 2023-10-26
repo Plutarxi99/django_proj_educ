@@ -1,7 +1,9 @@
+from django.conf import settings
 from django.db import models
 from django.db.models import Q
 
-NULLABLE = {'blank': True, 'null': True}
+
+from config.settings import NULLABLE
 
 
 class Product(models.Model):
@@ -13,6 +15,8 @@ class Product(models.Model):
     price = models.IntegerField(verbose_name='цена за покупку')
     data_of_creation = models.DateTimeField(default='2018-11-20T15:58:44.767594-06:00', verbose_name='дата создания')
     data_end_change = models.DateTimeField(auto_now_add=True, verbose_name='дата последнего изменения')
+
+    product_creator = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, **NULLABLE, verbose_name='создатель продукта')
 
     def __str__(self):
         return f'{self.name}/{self.description}'

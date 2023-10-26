@@ -1,7 +1,7 @@
 from django.db import models
 from django.template.defaultfilters import slugify
 
-NULLABLE = {'blank': True, 'null': True}
+from config.settings import NULLABLE
 
 
 class Journal(models.Model):

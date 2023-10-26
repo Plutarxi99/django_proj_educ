@@ -1,0 +1,275 @@
+[
+  {
+    "model": "journal.journal",
+    "pk": 1,
+    "fields": {
+      "title": "ntcn",
+      "slug": "ntcn",
+      "content": "ntcn",
+      "picture": "",
+      "data_create": "2023-10-12T08:22:12.714Z",
+      "published_is": false,
+      "count_view": 11
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 3,
+    "fields": {
+      "title": "ntcn",
+      "slug": "ntcn",
+      "content": "ntcn",
+      "picture": "",
+      "data_create": "2023-10-12T08:22:40.476Z",
+      "published_is": false,
+      "count_view": 31
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 4,
+    "fields": {
+      "title": "ntcn",
+      "slug": "ntcn",
+      "content": "ntcn",
+      "picture": "",
+      "data_create": "2023-10-12T08:22:42.050Z",
+      "published_is": true,
+      "count_view": 14
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 5,
+    "fields": {
+      "title": "ntcn",
+      "slug": "ntcn",
+      "content": "ntcn",
+      "picture": "",
+      "data_create": "2023-10-12T08:24:12.268Z",
+      "published_is": false,
+      "count_view": 12
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 6,
+    "fields": {
+      "title": "ntcn",
+      "slug": "ntcn",
+      "content": "ntcn",
+      "picture": "",
+      "data_create": "2023-10-12T08:24:56.305Z",
+      "published_is": true,
+      "count_view": 102
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 8,
+    "fields": {
+      "title": "ntcn",
+      "slug": "ntcn",
+      "content": "ntcn",
+      "picture": "",
+      "data_create": "2023-10-12T08:25:00.333Z",
+      "published_is": true,
+      "count_view": 11
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 10,
+    "fields": {
+      "title": "ntcn",
+      "slug": "ntcn",
+      "content": "ng",
+      "picture": "",
+      "data_create": "2023-10-12T09:00:22.589Z",
+      "published_is": false,
+      "count_view": 14
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 11,
+    "fields": {
+      "title": "ntcn",
+      "slug": "wd",
+      "content": "dw",
+      "picture": "",
+      "data_create": "2023-10-12T09:07:29.494Z",
+      "published_is": false,
+      "count_view": 0
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 12,
+    "fields": {
+      "title": "qweqwe",
+      "slug": "qweqweqwe",
+      "content": "qweqweqwe",
+      "picture": "",
+      "data_create": "2023-10-12T14:56:27.121Z",
+      "published_is": false,
+      "count_view": 1
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 13,
+    "fields": {
+      "title": "Егор",
+      "slug": "",
+      "content": "Егор",
+      "picture": "",
+      "data_create": "2023-10-12T15:13:51.735Z",
+      "published_is": false,
+      "count_view": 10
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 14,
+    "fields": {
+      "title": "Малява",
+      "slug": "123",
+      "content": "Такая делоылимфуокщпигофукртжпижуркигуфкриуфкифукифукиуфкиуфкиуфкиуфки",
+      "picture": "",
+      "data_create": "2023-10-12T19:42:26.036Z",
+      "published_is": false,
+      "count_view": 0
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 15,
+    "fields": {
+      "title": "qwe",
+      "slug": null,
+      "content": "qwe",
+      "picture": "",
+      "data_create": "2023-10-12T21:30:11.652Z",
+      "published_is": false,
+      "count_view": 0
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 17,
+    "fields": {
+      "title": "Егор!!!",
+      "slug": "",
+      "content": "Tujh",
+      "picture": "",
+      "data_create": "2023-10-12T21:42:42.053Z",
+      "published_is": true,
+      "count_view": 21
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 18,
+    "fields": {
+      "title": "ntcn",
+      "slug": "ntcn",
+      "content": "qwe",
+      "picture": "",
+      "data_create": "2023-10-12T21:43:16.492Z",
+      "published_is": false,
+      "count_view": 0
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 20,
+    "fields": {
+      "title": "qwqd",
+      "slug": "qwqd",
+      "content": "qwdqwd",
+      "picture": "",
+      "data_create": "2023-10-12T21:44:34.672Z",
+      "published_is": false,
+      "count_view": 0
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 21,
+    "fields": {
+      "title": "Егор",
+      "slug": "",
+      "content": "qwe",
+      "picture": "",
+      "data_create": "2023-10-12T21:46:41.804Z",
+      "published_is": false,
+      "count_view": 10
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 22,
+    "fields": {
+      "title": "qwe",
+      "slug": "qwe",
+      "content": "qwe",
+      "picture": "",
+      "data_create": "2023-10-12T21:47:56.644Z",
+      "published_is": false,
+      "count_view": 0
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 23,
+    "fields": {
+      "title": "Егор",
+      "slug": "",
+      "content": "qwe",
+      "picture": "",
+      "data_create": "2023-10-15T13:46:06.565Z",
+      "published_is": false,
+      "count_view": 12
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 24,
+    "fields": {
+      "title": "Егор123",
+      "slug": "123",
+      "content": "qwrqwrqwrqwr",
+      "picture": "",
+      "data_create": "2023-10-15T15:57:13.937Z",
+      "published_is": false,
+      "count_view": 101
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 25,
+    "fields": {
+      "title": "Егор!!!J",
+      "slug": "j",
+      "content": "qwrwqr",
+      "picture": "",
+      "data_create": "2023-10-15T15:57:49.710Z",
+      "published_is": false,
+      "count_view": 1
+    }
+  },
+  {
+    "model": "journal.journal",
+    "pk": 26,
+    "fields": {
+      "title": "Егор!!!!",
+      "slug": "",
+      "content": "qwrqwr",
+      "picture": "",
+      "data_create": "2023-10-15T15:58:10.208Z",
+      "published_is": false,
+      "count_view": 0
+    }
+  }
+]
