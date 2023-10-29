@@ -1,0 +1,62 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbk  df2_sha256$600000$Uajn69AKR4h7P1RxXBqmaP$+J0e40ASt80ef8gDtIycypVSYX6KfHiHC6PT35/0PEE=",
+      "last_login": "2023-10-26T10:55:17.851Z",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-10-26T10:11:40.175Z",
+      "email": "shievanov@bk.ru",
+      "first_name": "Егор",
+      "last_name": "Шеванов",
+      "avatar": "",
+      "phone": "+79524281391",
+      "country": "Russia",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$IKl95pVBeeSgkMsrKK0JUv$4OW6s6sEUoD4ePY6OfTUyi2fF9QFXj9SAlnj38hMzGs=",
+      "last_login": "2023-10-27T15:56:51.079Z",
+      "is_superuser": true,
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-10-27T15:56:43.477Z",
+      "email": "admin@sky.pro",
+      "first_name": "Admin",
+      "last_name": "Admonov",
+      "avatar": "",
+      "phone": null,
+      "country": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "test@skypro.ru",
+      "last_login": "2023-10-27T16:00:28Z",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-10-27T15:59:59Z",
+      "email": "test@skypro.ru",
+      "first_name": null,
+      "last_name": null,
+      "avatar": "",
+      "phone": null,
+      "country": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

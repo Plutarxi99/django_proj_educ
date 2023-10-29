@@ -32,8 +32,7 @@ class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
         # fields = '__all__'
-        fields = ('name', 'description', 'category', 'price', )
-
+        fields = ('name', 'description', 'category', 'price', 'is_published', )
 
 
 class VersionForm(forms.ModelForm):

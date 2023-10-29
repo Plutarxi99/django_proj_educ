@@ -21,3 +21,6 @@ class VersionAdmin(admin.ModelAdmin):
     list_display = ('pk', 'product_name', 'version_number', 'version_name', 'version_is_active',)
 
 
+
+
+

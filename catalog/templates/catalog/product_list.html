@@ -8,11 +8,11 @@
 {% endblock %}
 
 {% block content_table %}
-{% if request.user.is_authenticated %}
+{% if perms.catalog.add_product %}
 <a
         class="btn btn-outline-primary" href="{% url 'catalog:create' %}">Добавить продукт
 </a>
-
+{% endif %}
 <table class="table">
 
     <thead>
@@ -25,6 +25,7 @@
         <th scope="col">Работа с версиями</th>
         <th scope="col">Активная версия</th>
         <th scope="col">Создатель продукта</th>
+        <th scope="col">Публикация продукта</th>
     </tr>
     </thead>
     {% if product_list %}
@@ -39,16 +40,24 @@
             <th>
                 <a href="{% url 'catalog:view' product.pk %}"
                    class="btn btn-sm btn-outline-secondary">Просмотр</a>
+                {% if perms.catalog.change_product %}
+
                 <a href="{% url 'catalog:edit' product.pk %}"
                    class="btn btn-sm btn-outline-secondary">Изменение</a>
+
+                {% endif %}
+                {% if perms.catalog.delete_product %}
                 <a href="{% url 'catalog:delete' product.pk %}"
                    class="btn btn-sm btn-outline-secondary">Удаление</a>
+                {% endif %}
             </th>
             <th>
                 <a href="{% url 'catalog:view_version' product.pk %}"
                    class="btn btn-sm btn-outline-secondary">Просмотр версии</a>
+                {% if perms.catalog.change_version %}
                 <a href="{% url 'catalog:edit_version' product.pk %}"
                    class="btn btn-sm btn-outline-secondary">Изменение версии</a>
+                {% endif %}
             </th>
             <th>
                 {% for version in product.version_set.all %}
@@ -60,12 +69,18 @@
                 {% endif %}
                 {% endfor %}
             </th>
-                        <th>
-                            {% if product.product_creator %}
-                            {{ product.product_creator }}
-                            {% endif %}
-                        </th>
-
+            <th>
+                {% if product.product_creator %}
+                {{ product.product_creator }}
+                {% endif %}
+            </th>
+            <th>
+                {% if product.is_published != False %}
+                <p class="text-success">Опубликовано</p>
+                {% else %}
+                <p class="text-danger">Не Опубликовано</p>
+                {% endif %}
+            </th>
         </tr>
         </tbody>
         {% endfor %}
@@ -74,7 +89,7 @@
     <p>No polls are available.</p>
     {% endif %}
 </table>
-{% endif %}
+
 {% endblock %}
 
 {% block content_buy %}

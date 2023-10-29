@@ -1,3 +1,6 @@
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from django.contrib.auth.models import Permission
+from django.contrib.contenttypes.models import ContentType
 from django.db import IntegrityError
 from django.forms import inlineformset_factory
 from django.shortcuts import render
@@ -7,24 +10,25 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from .forms import ProductForm, VersionForm, VersionFormProduct
 from .models import Product, Version
 from django.contrib import messages
-from django.http import JsonResponse, HttpResponse
+from django.http import JsonResponse, HttpResponse, Http404
 
 
-class ProductListView(ListView):
+class ProductListView(LoginRequiredMixin, ListView):
     model = Product
 
 
-class ProductDetailView(DetailView):
+class ProductDetailView(LoginRequiredMixin, DetailView):
     model = Product
 
 
-class VersionDetailView(DetailView):
+class VersionDetailView(LoginRequiredMixin, DetailView):
     model = Version
 
 
-class ProductCreateView(CreateView):
+class ProductCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
     model = Product
     form_class = ProductForm
+    permission_required = 'catalog.add_product'
     # fields = ('name', 'description', 'category', 'price', 'pictures',)
     success_url = reverse_lazy('catalog:home')
 
@@ -42,12 +46,13 @@ class ProductCreateView(CreateView):
 #     success_url = reverse_lazy('catalog:home')
 
 
-class ProductUpdateView(UpdateView):
+class ProductUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
     model = Product
     form_class = ProductForm
     # fields = ('name', 'description', 'category', 'price', 'pictures',)
     success_url = reverse_lazy('catalog:home')
     error_message = "Оставьте одну активную версию"
+    permission_required = 'catalog.change_product'
 
     # def form_invalid(self, form):
     #     messages.error(self.request, self.error_message)
@@ -68,7 +73,14 @@ class ProductUpdateView(UpdateView):
             context_data['formset'] = VersionFormset(self.request.POST, instance=obj)
         else:
             context_data['formset'] = VersionFormset(instance=obj)
+
         return context_data
+
+    # def get_object(self, queryset=None):
+    #     self.object = super().get_object(queryset)
+    #     if self.object.product_creator != self.request.user:
+    #         raise Http404
+    #     return self.object
 
     def form_valid(self, form):
         formset = self.get_context_data()['formset']
@@ -80,10 +92,11 @@ class ProductUpdateView(UpdateView):
         return super().form_valid(form)
 
 
-class VersionUpdateView(UpdateView):
+class VersionUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
     model = Version
     form_class = VersionForm
     success_url = reverse_lazy('catalog:home')
+    permission_required = 'catalog.change_version'
 
 
 # def index(request):
@@ -91,9 +104,10 @@ class VersionUpdateView(UpdateView):
 #     return render(request, 'version_form.html', context)
 
 
-class ProductDeleteView(DeleteView):
+class ProductDeleteView(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):
     model = Product
     success_url = reverse_lazy('catalog:home')
+    permission_required = 'catalog.delete_product'
 
 
 class ProductTemplateView(TemplateView):
