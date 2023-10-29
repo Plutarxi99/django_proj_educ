@@ -1,6 +1,8 @@
+from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.contrib.auth.models import Permission
 from django.contrib.contenttypes.models import ContentType
+from django.core.cache import cache
 from django.db import IntegrityError
 from django.forms import inlineformset_factory
 from django.shortcuts import render
@@ -8,9 +10,36 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 
 from .forms import ProductForm, VersionForm, VersionFormProduct
-from .models import Product, Version
+from .models import Product, Version, Category
 from django.contrib import messages
 from django.http import JsonResponse, HttpResponse, Http404
+
+from .services import cache_category
+
+
+class CategoryListView(LoginRequiredMixin, ListView):
+    model = Category
+
+    def get_context_data(self, **kwargs):
+        context_data = super().get_context_data(**kwargs)
+        if settings.CACHE_ENABLED:
+            context_data['category_list'] = cache_category()
+        return context_data
+
+
+    # def get_queryset(self):
+    #     queryset = super().get_queryset()
+    #     queryset = Category.objects.all()
+    #     if settings.CACHE_ENABLED:
+    #         key = 'categories'
+    #         cache_data = cache.get(key)
+    #         if cache_data is None:
+    #             cache_data = queryset
+    #             cache.set(key, cache_data)
+    #             print(cache_data)
+    #         return cache_data
+    #
+    #     return queryset
 
 
 class ProductListView(LoginRequiredMixin, ListView):
@@ -76,11 +105,14 @@ class ProductUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView)
 
         return context_data
 
-    # def get_object(self, queryset=None):
-    #     self.object = super().get_object(queryset)
-    #     if self.object.product_creator != self.request.user:
-    #         raise Http404
-    #     return self.object
+    def get_object(self, queryset=None):
+        self.object = super().get_object(queryset)
+        if self.request.user.is_superuser:
+            return self.object
+        elif self.object.product_creator != self.request.user:
+            raise Http404
+        else:
+            return self.object
 
     def form_valid(self, form):
         formset = self.get_context_data()['formset']
