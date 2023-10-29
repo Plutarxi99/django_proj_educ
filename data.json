@@ -3,52 +3,13 @@
     "model": "admin.logentry",
     "pk": 1,
     "fields": {
-      "action_time": "2023-10-19T13:18:35.922Z",
-      "user": 2,
-      "content_type": 10,
-      "object_id": "1",
-      "object_repr": "ручка/2018-11-20 21:58:44.767594+00:00 - 2023-10-01 22:34:09.624392+00:00: для письма/Шариковая - 1: True",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 2,
-    "fields": {
-      "action_time": "2023-10-21T08:24:16.781Z",
+      "action_time": "2023-10-27T16:00:49.517Z",
       "user": 2,
       "content_type": 10,
       "object_id": "3",
-      "object_repr": "тетрадь/2018-11-20 21:58:44.767000+00:00 - 2023-10-01 22:34:09.624000+00:00: для письма/Бумажная - 1: False",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f\"]}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 3,
-    "fields": {
-      "action_time": "2023-10-21T12:54:26.949Z",
-      "user": 2,
-      "content_type": 10,
-      "object_id": "5",
-      "object_repr": "клавиатура/2018-11-20 21:58:44.767000+00:00 - 2023-10-01 22:34:09.624000+00:00: для учебы/Мембранная - 1: True",
-      "action_flag": 3,
-      "change_message": ""
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 4,
-    "fields": {
-      "action_time": "2023-10-21T12:55:49.212Z",
-      "user": 2,
-      "content_type": 10,
-      "object_id": "1",
-      "object_repr": "ручка/2018-11-20 21:58:44.767000+00:00 - 2023-10-01 22:34:09.624000+00:00: для письма/Шариковая - 1: False",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f\"]}}]"
+      "object_repr": "test@skypro.ru",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
     }
   },
   {
@@ -163,180 +124,180 @@
     "model": "auth.permission",
     "pk": 13,
     "fields": {
-      "name": "Can add user",
+      "name": "Can add content type",
       "content_type": 4,
-      "codename": "add_user"
+      "codename": "add_contenttype"
     }
   },
   {
     "model": "auth.permission",
     "pk": 14,
     "fields": {
-      "name": "Can change user",
+      "name": "Can change content type",
       "content_type": 4,
-      "codename": "change_user"
+      "codename": "change_contenttype"
     }
   },
   {
     "model": "auth.permission",
     "pk": 15,
     "fields": {
-      "name": "Can delete user",
+      "name": "Can delete content type",
       "content_type": 4,
-      "codename": "delete_user"
+      "codename": "delete_contenttype"
     }
   },
   {
     "model": "auth.permission",
     "pk": 16,
     "fields": {
-      "name": "Can view user",
+      "name": "Can view content type",
       "content_type": 4,
-      "codename": "view_user"
+      "codename": "view_contenttype"
     }
   },
   {
     "model": "auth.permission",
     "pk": 17,
     "fields": {
-      "name": "Can add content type",
+      "name": "Can add session",
       "content_type": 5,
-      "codename": "add_contenttype"
+      "codename": "add_session"
     }
   },
   {
     "model": "auth.permission",
     "pk": 18,
     "fields": {
-      "name": "Can change content type",
+      "name": "Can change session",
       "content_type": 5,
-      "codename": "change_contenttype"
+      "codename": "change_session"
     }
   },
   {
     "model": "auth.permission",
     "pk": 19,
     "fields": {
-      "name": "Can delete content type",
+      "name": "Can delete session",
       "content_type": 5,
-      "codename": "delete_contenttype"
+      "codename": "delete_session"
     }
   },
   {
     "model": "auth.permission",
     "pk": 20,
     "fields": {
-      "name": "Can view content type",
+      "name": "Can view session",
       "content_type": 5,
-      "codename": "view_contenttype"
+      "codename": "view_session"
     }
   },
   {
     "model": "auth.permission",
     "pk": 21,
     "fields": {
-      "name": "Can add session",
+      "name": "Can add категория",
       "content_type": 6,
-      "codename": "add_session"
+      "codename": "add_category"
     }
   },
   {
     "model": "auth.permission",
     "pk": 22,
     "fields": {
-      "name": "Can change session",
+      "name": "Can change категория",
       "content_type": 6,
-      "codename": "change_session"
+      "codename": "change_category"
     }
   },
   {
     "model": "auth.permission",
     "pk": 23,
     "fields": {
-      "name": "Can delete session",
+      "name": "Can delete категория",
       "content_type": 6,
-      "codename": "delete_session"
+      "codename": "delete_category"
     }
   },
   {
     "model": "auth.permission",
     "pk": 24,
     "fields": {
-      "name": "Can view session",
+      "name": "Can view категория",
       "content_type": 6,
-      "codename": "view_session"
+      "codename": "view_category"
     }
   },
   {
     "model": "auth.permission",
     "pk": 25,
     "fields": {
-      "name": "Can add категория",
+      "name": "Can add продукт",
       "content_type": 7,
-      "codename": "add_category"
+      "codename": "add_product"
     }
   },
   {
     "model": "auth.permission",
     "pk": 26,
     "fields": {
-      "name": "Can change категория",
+      "name": "Can change продукт",
       "content_type": 7,
-      "codename": "change_category"
+      "codename": "change_product"
     }
   },
   {
     "model": "auth.permission",
     "pk": 27,
     "fields": {
-      "name": "Can delete категория",
+      "name": "Can delete продукт",
       "content_type": 7,
-      "codename": "delete_category"
+      "codename": "delete_product"
     }
   },
   {
     "model": "auth.permission",
     "pk": 28,
     "fields": {
-      "name": "Can view категория",
+      "name": "Can view продукт",
       "content_type": 7,
-      "codename": "view_category"
+      "codename": "view_product"
     }
   },
   {
     "model": "auth.permission",
     "pk": 29,
     "fields": {
-      "name": "Can add продукт",
+      "name": "Can add версия",
       "content_type": 8,
-      "codename": "add_product"
+      "codename": "add_version"
     }
   },
   {
     "model": "auth.permission",
     "pk": 30,
     "fields": {
-      "name": "Can change продукт",
+      "name": "Can change версия",
       "content_type": 8,
-      "codename": "change_product"
+      "codename": "change_version"
     }
   },
   {
     "model": "auth.permission",
     "pk": 31,
     "fields": {
-      "name": "Can delete продукт",
+      "name": "Can delete версия",
       "content_type": 8,
-      "codename": "delete_product"
+      "codename": "delete_version"
     }
   },
   {
     "model": "auth.permission",
     "pk": 32,
     "fields": {
-      "name": "Can view продукт",
+      "name": "Can view версия",
       "content_type": 8,
-      "codename": "view_product"
+      "codename": "view_version"
     }
   },
   {
@@ -379,36 +340,36 @@
     "model": "auth.permission",
     "pk": 37,
     "fields": {
-      "name": "Can add версия",
+      "name": "Can add пользователь",
       "content_type": 10,
-      "codename": "add_version"
+      "codename": "add_user"
     }
   },
   {
     "model": "auth.permission",
     "pk": 38,
     "fields": {
-      "name": "Can change версия",
+      "name": "Can change пользователь",
       "content_type": 10,
-      "codename": "change_version"
+      "codename": "change_user"
     }
   },
   {
     "model": "auth.permission",
     "pk": 39,
     "fields": {
-      "name": "Can delete версия",
+      "name": "Can delete пользователь",
       "content_type": 10,
-      "codename": "delete_version"
+      "codename": "delete_user"
     }
   },
   {
     "model": "auth.permission",
     "pk": 40,
     "fields": {
-      "name": "Can view версия",
+      "name": "Can view пользователь",
       "content_type": 10,
-      "codename": "view_version"
+      "codename": "view_user"
     }
   },
   {
@@ -439,21 +400,13 @@
     "model": "contenttypes.contenttype",
     "pk": 4,
     "fields": {
-      "app_label": "auth",
-      "model": "user"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 5,
-    "fields": {
       "app_label": "contenttypes",
       "model": "contenttype"
     }
   },
   {
     "model": "contenttypes.contenttype",
-    "pk": 6,
+    "pk": 5,
     "fields": {
       "app_label": "sessions",
       "model": "session"
@@ -461,7 +414,7 @@
   },
   {
     "model": "contenttypes.contenttype",
-    "pk": 7,
+    "pk": 6,
     "fields": {
       "app_label": "catalog",
       "model": "category"
@@ -469,10 +422,18 @@
   },
   {
     "model": "contenttypes.contenttype",
-    "pk": 8,
+    "pk": 7,
     "fields": {
       "app_label": "catalog",
       "model": "product"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "catalog",
+      "model": "version"
     }
   },
   {
@@ -487,32 +448,16 @@
     "model": "contenttypes.contenttype",
     "pk": 10,
     "fields": {
-      "app_label": "catalog",
-      "model": "version"
+      "app_label": "users",
+      "model": "user"
     }
   },
   {
     "model": "sessions.session",
-    "pk": "636wqjuoyedf8cw7483b3m5suqbt5emj",
+    "pk": "mzxnnbn8aha9mwbn9zpeux95mmu0fax0",
     "fields": {
-      "session_data": ".eJxVjEEOwiAQRe_C2pChhc7UpfuegcAAUjWQlHZlvLtt0oVu33v_v4V125rt1uJi5yCuQonLL_OOn7EcIjxcuVfJtazL7OWRyNM2OdUQX7ez_TvIruV9Dcr1hlCBJ88INDIxEyIEpY3pkmdF2AEP_RjRGNdDSgNg2okmUlp8vrytNrc:1qn4Qj:62tdMEWp-4QxshsjpxUPzwzkHSoOZQ3Zx6zeC9RoXls",
-      "expire_date": "2023-10-15T21:56:49.754Z"
-    }
-  },
-  {
-    "model": "sessions.session",
-    "pk": "8ikxm3fcfbbonekjl40cnax3oclpetdm",
-    "fields": {
-      "session_data": ".eJxVjEEOwiAQRe_C2pChhc7UpfuegcAAUjWQlHZlvLtt0oVu33v_v4V125rt1uJi5yCuQonLL_OOn7EcIjxcuVfJtazL7OWRyNM2OdUQX7ez_TvIruV9Dcr1hlCBJ88INDIxEyIEpY3pkmdF2AEP_RjRGNdDSgNg2okmUlp8vrytNrc:1qlpKr:FG8m9VMoLxn7JzLAntvUEfXFBKMyQcldIdisxCK4sfg",
-      "expire_date": "2023-10-12T11:37:37.976Z"
-    }
-  },
-  {
-    "model": "sessions.session",
-    "pk": "mrqkcblq2s4qrognbl7nly2pdx1jjzri",
-    "fields": {
-      "session_data": ".eJxVjDsOwjAQRO_iGln-O6GkzxmsXXuNA8iW4qRC3J1ESgHlzHszbxZgW0vYOi1hTuzKFLv8dgjxSfUA6QH13nhsdV1m5IfCT9r51BK9bqf7d1Cgl30NxhJidKQoSp-1H8mgUkaiEAM5vSeBmEfrMjrnRcxpsCiNSaATZME-XwB2OLI:1qtSiw:6dQtU217ghtfQ8npmTytmSt3OZJeLBAgfKUdX1rxnGs",
-      "expire_date": "2023-11-02T13:06:02.661Z"
+      "session_data": ".eJxVjDsOwjAQBe_iGlmxvf5R0nMGa73e4ABypDipEHeHSCmgfTPzXiLhtta0dV7SVMRZaHH63TLSg9sOyh3bbZY0t3WZstwVedAur3Ph5-Vw_w4q9vqtCTAYZcAPAEqBdXEky0ZHm9FDgVHHGMAHRYVNZq0yeYLBedIRHDvx_gC2Szbw:1qwPCd:ogs-M9l771EOKADL3_Goph2g57AvYQ5XzyoJZmq11vA",
+      "expire_date": "2023-11-10T15:56:51.080Z"
     }
   },
   {
@@ -521,11 +466,12 @@
     "fields": {
       "name": "ручка",
       "description": "для письма",
-      "pictures": "plut.png",
+      "pictures": "",
       "category": 1,
       "price": 150,
       "data_of_creation": "2018-11-20T21:58:44.767Z",
-      "data_end_change": "2023-10-01T22:34:09.624Z"
+      "data_end_change": "2023-09-28T15:37:19.313Z",
+      "product_creator": null
     }
   },
   {
@@ -538,7 +484,8 @@
       "category": 2,
       "price": 30000,
       "data_of_creation": "2018-11-20T21:58:44.767Z",
-      "data_end_change": "2023-10-01T22:34:09.624Z"
+      "data_end_change": "2023-09-28T15:37:19.313Z",
+      "product_creator": null
     }
   },
   {
@@ -551,7 +498,8 @@
       "category": 1,
       "price": 100,
       "data_of_creation": "2018-11-20T21:58:44.767Z",
-      "data_end_change": "2023-10-01T22:34:09.624Z"
+      "data_end_change": "2023-09-28T15:37:19.313Z",
+      "product_creator": null
     }
   },
   {
@@ -564,7 +512,50 @@
       "category": 2,
       "price": 2000,
       "data_of_creation": "2018-11-20T21:58:44.767Z",
-      "data_end_change": "2023-10-01T22:34:09.624Z"
+      "data_end_change": "2023-09-28T15:37:19.313Z",
+      "product_creator": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+      "name": "Шапка",
+      "description": "Для головы",
+      "pictures": "",
+      "category": 5,
+      "price": 123,
+      "data_of_creation": "2018-11-20T21:58:44.767Z",
+      "data_end_change": "2023-10-26T10:36:31.531Z",
+      "product_creator": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 6,
+    "fields": {
+      "name": "куртка",
+      "description": "зима",
+      "pictures": "",
+      "category": 3,
+      "price": 5000,
+      "data_of_creation": "2018-11-20T21:58:44.767Z",
+      "data_end_change": "2023-10-26T10:51:37.992Z",
+      "product_creator": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 7,
+    "fields": {
+      "name": "Квартира",
+      "description": "для сдачи",
+      "pictures": "",
+      "category": 1,
+      "price": 1000000,
+      "data_of_creation": "2018-11-20T21:58:44.767Z",
+      "data_end_change": "2023-10-26T10:55:01.177Z",
+      "product_creator": 1
     }
   },
   {
@@ -584,6 +575,14 @@
     }
   },
   {
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {
+      "name": "кухня",
+      "description": "для посуды"
+    }
+  },
+  {
     "model": "catalog.version",
     "pk": 1,
     "fields": {
@@ -597,9 +596,9 @@
     "model": "catalog.version",
     "pk": 2,
     "fields": {
-      "product_name": 2,
+      "product_name": 3,
       "version_number": 1,
-      "version_name": "Игровой",
+      "version_name": "Бумажная",
       "version_is_active": true
     }
   },
@@ -607,9 +606,9 @@
     "model": "catalog.version",
     "pk": 3,
     "fields": {
-      "product_name": 3,
+      "product_name": 2,
       "version_number": 1,
-      "version_name": "Бумажная",
+      "version_name": "Игровой",
       "version_is_active": true
     }
   },
@@ -621,46 +620,6 @@
       "version_number": 1,
       "version_name": "Механическая",
       "version_is_active": true
-    }
-  },
-  {
-    "model": "catalog.version",
-    "pk": 7,
-    "fields": {
-      "product_name": 1,
-      "version_number": 2,
-      "version_name": "Гелевая",
-      "version_is_active": false
-    }
-  },
-  {
-    "model": "catalog.version",
-    "pk": 8,
-    "fields": {
-      "product_name": 4,
-      "version_number": 2,
-      "version_name": "Мембранная",
-      "version_is_active": false
-    }
-  },
-  {
-    "model": "catalog.version",
-    "pk": 9,
-    "fields": {
-      "product_name": 3,
-      "version_number": 2,
-      "version_name": "Картонная",
-      "version_is_active": false
-    }
-  },
-  {
-    "model": "catalog.version",
-    "pk": 10,
-    "fields": {
-      "product_name": 2,
-      "version_number": 2,
-      "version_name": "Офисный",
-      "version_is_active": false
     }
   },
   {
@@ -935,4 +894,65 @@
       "published_is": false,
       "count_view": 0
     }
+  },
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$Uajn69AKR4h7P1RxXBqmaP$+J0e40ASt80ef8gDtIycypVSYX6KfHiHC6PT35/0PEE=",
+      "last_login": "2023-10-26T10:55:17.851Z",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-10-26T10:11:40.175Z",
+      "email": "shievanov@bk.ru",
+      "first_name": "Егор",
+      "last_name": "Шеванов",
+      "avatar": "",
+      "phone": "+79524281391",
+      "country": "Russia",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$IKl95pVBeeSgkMsrKK0JUv$4OW6s6sEUoD4ePY6OfTUyi2fF9QFXj9SAlnj38hMzGs=",
+      "last_login": "2023-10-27T15:56:51.079Z",
+      "is_superuser": true,
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-10-27T15:56:43.477Z",
+      "email": "admin@sky.pro",
+      "first_name": "Admin",
+      "last_name": "Admonov",
+      "avatar": "",
+      "phone": null,
+      "country": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "test@skypro.ru",
+      "last_login": "2023-10-27T16:00:28Z",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-10-27T15:59:59Z",
+      "email": "test@skypro.ru",
+      "first_name": null,
+      "last_name": null,
+      "avatar": "",
+      "phone": null,
+      "country": null,
+      "groups": [],
+      "user_permissions": []
+    }
   }
+]

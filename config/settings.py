@@ -165,6 +165,7 @@ AUTH_USER_MODEL = 'users.User'
 # Редирект на домашнюю страницу
 LOGOUT_REDIRECT_URL = '/'
 LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = '/users/'
 
 # Значения для форм. Для вставки в их условия полей
 NULLABLE = {'blank': True, 'null': True}
