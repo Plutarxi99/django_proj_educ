@@ -1,0 +1,30 @@
+{% extends 'catalog/base_pricing.html' %}
+{% load my_tags %}
+
+{% block content_table %}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">id</th>
+        <th scope="col">Названия</th>
+        <th scope="col">Описание</th>
+    </tr>
+    </thead>
+    {% if category_list %}
+    <ul>
+        {% for object in category_list %}
+        <tbody>
+        <tr>
+            <th>{{ object.pk }}</th>
+            <th>{{ object.name }}</th>
+            <th>{{ object.description }}</th>
+        </tr>
+        </tbody>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No polls are available.</p>
+    {% endif %}
+</table>
+
+{% endblock %}
