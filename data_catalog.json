@@ -6,11 +6,12 @@
       "name": "ручка",
       "description": "для письма",
       "pictures": "",
-      "category": 1,
-      "price": 150,
-      "data_of_creation": "2018-11-20T21:58:44.767Z",
+      "category": 2,
+      "price": 1502,
+      "data_of_creation": "2018-11-20T21:58:44Z",
       "data_end_change": "2023-09-28T15:37:19.313Z",
-      "product_creator": null
+      "product_creator": 6,
+      "is_published": true
     }
   },
   {
@@ -22,9 +23,10 @@
       "pictures": "",
       "category": 2,
       "price": 30000,
-      "data_of_creation": "2018-11-20T21:58:44.767Z",
+      "data_of_creation": "2018-11-20T21:58:44Z",
       "data_end_change": "2023-09-28T15:37:19.313Z",
-      "product_creator": null
+      "product_creator": 1,
+      "is_published": true
     }
   },
   {
@@ -38,7 +40,8 @@
       "price": 100,
       "data_of_creation": "2018-11-20T21:58:44.767Z",
       "data_end_change": "2023-09-28T15:37:19.313Z",
-      "product_creator": null
+      "product_creator": null,
+      "is_published": false
     }
   },
   {
@@ -49,10 +52,11 @@
       "description": "для учебы",
       "pictures": "",
       "category": 2,
-      "price": 2000,
+      "price": 20001,
       "data_of_creation": "2018-11-20T21:58:44.767Z",
       "data_end_change": "2023-09-28T15:37:19.313Z",
-      "product_creator": null
+      "product_creator": null,
+      "is_published": false
     }
   },
   {
@@ -63,10 +67,11 @@
       "description": "Для головы",
       "pictures": "",
       "category": 5,
-      "price": 123,
+      "price": 1231,
       "data_of_creation": "2018-11-20T21:58:44.767Z",
       "data_end_change": "2023-10-26T10:36:31.531Z",
-      "product_creator": null
+      "product_creator": null,
+      "is_published": false
     }
   },
   {
@@ -80,21 +85,8 @@
       "price": 5000,
       "data_of_creation": "2018-11-20T21:58:44.767Z",
       "data_end_change": "2023-10-26T10:51:37.992Z",
-      "product_creator": null
-    }
-  },
-  {
-    "model": "catalog.product",
-    "pk": 7,
-    "fields": {
-      "name": "Квартира",
-      "description": "для сдачи",
-      "pictures": "",
-      "category": 1,
-      "price": 1000000,
-      "data_of_creation": "2018-11-20T21:58:44.767Z",
-      "data_end_change": "2023-10-26T10:55:01.177Z",
-      "product_creator": 1
+      "product_creator": null,
+      "is_published": true
     }
   },
   {

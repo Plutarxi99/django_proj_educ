@@ -351,6 +351,97 @@
     }
   },
   {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2023-11-05T13:59:45.869Z",
+      "user": 2,
+      "content_type": 3,
+      "object_id": "2",
+      "object_repr": "user_visiter",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2023-11-05T14:00:14.552Z",
+      "user": 2,
+      "content_type": 10,
+      "object_id": "6",
+      "object_repr": "user3moder@mail.ru",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+      "action_time": "2023-11-05T14:00:33.517Z",
+      "user": 2,
+      "content_type": 10,
+      "object_id": "6",
+      "object_repr": "user3moder@mail.ru",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+      "action_time": "2023-11-05T14:07:12.007Z",
+      "user": 2,
+      "content_type": 10,
+      "object_id": "6",
+      "object_repr": "user3moder@mail.ru",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+      "action_time": "2023-11-05T14:07:31.777Z",
+      "user": 2,
+      "content_type": 3,
+      "object_id": "2",
+      "object_repr": "user_visiter",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+      "action_time": "2023-11-05T14:07:37.899Z",
+      "user": 2,
+      "content_type": 10,
+      "object_id": "6",
+      "object_repr": "user3moder@mail.ru",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+      "action_time": "2023-11-05T14:08:24.898Z",
+      "user": 2,
+      "content_type": 10,
+      "object_id": "6",
+      "object_repr": "user3moder@mail.ru",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+  },
+  {
     "model": "auth.permission",
     "pk": 1,
     "fields": {
@@ -837,6 +928,14 @@
   },
   {
     "model": "sessions.session",
+    "pk": "ei0dqy449nrulil429a7tn2wk78mdukv",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlmxvf5R0nMGa73e4ABypDipEHeHSCmgfTPzXiLhtta0dV7SVMRZaHH63TLSg9sOyh3bbZY0t3WZstwVedAur3Ph5-Vw_w4q9vqtCTAYZcAPAEqBdXEky0ZHm9FDgVHHGMAHRYVNZq0yeYLBedIRHDvx_gC2Szbw:1qzfEk:KPhX6-8-yVxZ6UkK8RASAhrnx6WaavP1u27zdan_Zaw",
+      "expire_date": "2023-11-19T15:40:30.627Z"
+    }
+  },
+  {
+    "model": "sessions.session",
     "pk": "mzxnnbn8aha9mwbn9zpeux95mmu0fax0",
     "fields": {
       "session_data": ".eJxVjDsOwjAQBe_iGlmxvf5R0nMGa73e4ABypDipEHeHSCmgfTPzXiLhtta0dV7SVMRZaHH63TLSg9sOyh3bbZY0t3WZstwVedAur3Ph5-Vw_w4q9vqtCTAYZcAPAEqBdXEky0ZHm9FDgVHHGMAHRYVNZq0yeYLBedIRHDvx_gC2Szbw:1qwPCd:ogs-M9l771EOKADL3_Goph2g57AvYQ5XzyoJZmq11vA",
@@ -858,8 +957,8 @@
       "name": "ручка",
       "description": "для письма",
       "pictures": "",
-      "category": 1,
-      "price": 150,
+      "category": 2,
+      "price": 1502,
       "data_of_creation": "2018-11-20T21:58:44Z",
       "data_end_change": "2023-09-28T15:37:19.313Z",
       "product_creator": 6,
@@ -878,7 +977,7 @@
       "data_of_creation": "2018-11-20T21:58:44Z",
       "data_end_change": "2023-09-28T15:37:19.313Z",
       "product_creator": 1,
-      "is_published": false
+      "is_published": true
     }
   },
   {
@@ -1305,7 +1404,7 @@
     "pk": 2,
     "fields": {
       "password": "pbkdf2_sha256$600000$IKl95pVBeeSgkMsrKK0JUv$4OW6s6sEUoD4ePY6OfTUyi2fF9QFXj9SAlnj38hMzGs=",
-      "last_login": "2023-10-29T14:18:23.441Z",
+      "last_login": "2023-11-05T15:40:30.625Z",
       "is_superuser": true,
       "is_staff": true,
       "is_active": true,
@@ -1345,7 +1444,7 @@
     "pk": 6,
     "fields": {
       "password": "pbkdf2_sha256$600000$NDrbLCWZg8qWKDDS2H8Utu$bSO6ulnobklNBhuzZ2b8THMtnsfpUpEFAPDnnIrFuhA=",
-      "last_login": "2023-10-29T13:12:32.861Z",
+      "last_login": "2023-11-05T14:08:32.965Z",
       "is_superuser": false,
       "is_staff": true,
       "is_active": true,
