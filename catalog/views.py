@@ -26,7 +26,6 @@ class CategoryListView(LoginRequiredMixin, ListView):
             context_data['category_list'] = cache_category()
         return context_data
 
-
     # def get_queryset(self):
     #     queryset = super().get_queryset()
     #     queryset = Category.objects.all()
@@ -105,14 +104,22 @@ class ProductUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView)
 
         return context_data
 
-    def get_object(self, queryset=None):
-        self.object = super().get_object(queryset)
-        if self.request.user.is_superuser:
-            return self.object
-        elif self.object.product_creator != self.request.user:
-            raise Http404
-        else:
-            return self.object
+    # def get_object(self, queryset=None):
+    #     self.object = super().get_object(queryset)
+    #     if self.request.user.is_superuser:
+    #         return self.object
+    #     elif self.object.product_creator != self.request.user:
+    #         raise Http404
+    #     else:
+    #         return self.object
+
+    # def has_permission(self):
+    #     """
+    #     Если у пользователя нет прав на редактирование выдаёт ошибку 403
+    #     """
+    #     perms = self.get_permission_required()
+    #     product: Product = self.get_object()
+    #     return self.request.user == product.product_creator
 
     def form_valid(self, form):
         formset = self.get_context_data()['formset']
@@ -122,6 +129,32 @@ class ProductUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView)
             formset.save()
 
         return super().form_valid(form)
+
+    def get_form(self):
+        """
+        Метод для скрытия полей редактирования продукта в edit, если пользователь не его создатель
+        """
+        form = super().get_form()
+        if self.request.user != form.instance.product_creator:  # сравниваем авторизированного пользователя с создателем продукта
+            enabled_fields = set()  # метод для добавления полей для чего ???
+            if self.request.user.has_perm(
+                    'catalog.change_name'):  # если у пользователя есть права на редактирования то разрешаем редактирование этого пользователя
+                enabled_fields.add('name')  # добавляем поле для редактирования
+            if self.request.user.has_perm('catalog.change_description'):
+                enabled_fields.add('description')
+            if self.request.user.groups.filter(name='Модератор').exists(): # Если пользователь принадлежит к группе "Модератор", то ему можно изменять поля
+                enabled_fields.add('is_published')  # добавляем поле для редактирования
+
+            if self.request.user.is_superuser:
+                enabled_fields.add('price')  # добавляем поле для редактирования
+                enabled_fields.add('category')  # добавляем поле для редактирования
+                enabled_fields.add('is_published')  # добавляем поле для редактирования
+
+            for field_name in enabled_fields.symmetric_difference(form.fields):
+                form.fields[field_name].disabled = True
+                form.errors.pop(field_name, None)
+
+        return form
 
 
 class VersionUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
